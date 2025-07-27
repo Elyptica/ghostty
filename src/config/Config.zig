@@ -2467,7 +2467,7 @@ keybind: Keybinds = .{},
 ///
 ///   - `clipboard-copy` (default: true) - Show a notification when text is copied
 ///     to the clipboard.
-///   - `show-config-reload-notification` (default: true) - Show a notification when
+///   - `config-reload` (default: true) - Show a notification when
 ///     the configuration is reloaded.
 ///
 /// To specify a notification to enable, specify the name of the notification.
@@ -6952,7 +6952,7 @@ pub const GtkToolbarStyle = enum {
 /// See app-notifications
 pub const AppNotifications = packed struct {
     @"clipboard-copy": bool = true,
-    @"show-config-reload-notification": bool = true,
+    @"config-reload": bool = true,
 };
 
 /// See bell-features

@@ -772,7 +772,7 @@ pub fn focusCurrentTab(self: *Window) void {
 }
 
 pub fn onConfigReloaded(self: *Window) void {
-    if (self.app.config.@"app-notifications".@"show-config-reload-notification") {
+    if (self.app.config.@"app-notifications".@"config-reload") {
         self.sendToast(i18n._("Reloaded the configuration"));
     }
 }
