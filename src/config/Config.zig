@@ -2467,6 +2467,8 @@ keybind: Keybinds = .{},
 ///
 ///   - `clipboard-copy` (default: true) - Show a notification when text is copied
 ///     to the clipboard.
+///   - `show-config-reload-notification` (default: true) - Show a notification when
+///     the configuration is reloaded.
 ///
 /// To specify a notification to enable, specify the name of the notification.
 /// To specify a notification to disable, prefix the name with `no-`. For
