@@ -273,7 +273,15 @@ pub const Window = extern struct {
         _: *gobject.ParamSpec,
         self: *Self,
     ) callconv(.c) void {
-        self.addToast(i18n._("Reloaded the configuration"));
+        const priv = self.private();
+        const config_obj = priv.config orelse {
+            self.syncAppearance();
+            return;
+        };
+        const config = config_obj.get();
+        if (config.@"app-notifications".@"show-config-reload-notification") {
+            self.addToast(i18n._("Reloaded the configuration"));
+        }
         self.syncAppearance();
     }
 

@@ -6950,6 +6950,7 @@ pub const GtkToolbarStyle = enum {
 /// See app-notifications
 pub const AppNotifications = packed struct {
     @"clipboard-copy": bool = true,
+    @"show-config-reload-notification": bool = true,
 };
 
 /// See bell-features
